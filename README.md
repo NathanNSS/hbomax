@@ -10,7 +10,7 @@
   O clone do site HBO Max serve como desafio para os alunos da plataforma testarem seus conhecimentos e colocarem em prática os recursos de HTML e CSS abordados nos cursos.
 </p>
 
-<a href="https://micheleambrosio.github.io/hbomax/">
+<a href="https://nathannss.github.io/hbomax/">
   <img src="https://github.com/micheleambrosio/hbomax/blob/master/assets/images/readme-images/cover-2.png?raw=true">
 </a>
 
@@ -52,11 +52,11 @@ Recursos CSS presentes no projeto:
 
 <h2 id="challenges">🏆 Desafio</h2>
 
-Como parte do desafio final da Trilha de CSS, o desenvolvedor teve que reproduzir [esse projeto](https://micheleambrosio.github.io/hbomax/), sem realizar uma consulta do código final do site, presente na branch `master` do repositório.
+Como parte do desafio final da Trilha de CSS, o desenvolvedor teve que reproduzir [esse projeto](https://nathannss.github.io/hbomax/), sem realizar uma consulta do código final do site, presente na branch `master` do repositório.
 
 
 
-O resultado final do projeto deve contemplar todas as [features](#features) presentes no <a href="https://micheleambrosio.github.io/hbomax/">resultado final</a>.
+O resultado final do projeto deve contemplar todas as [features](#features) presentes no <a href="https://nathannss.github.io/hbomax/">resultado final</a>.
 
 As fontes utilizadas no projeto foram:
 
@@ -72,7 +72,7 @@ As fontes utilizadas no projeto foram:
 
 <h2 id="demo">🌈 Demonstração</h2>
 
-Você pode acessar ao resultado final do projeto [clicando aqui](https://micheleambrosio.github.io/hbomax/).
+Você pode acessar ao resultado final do projeto [clicando aqui](https://nathannss.github.io/hbomax/).
 
 
 <h2 id="author">💻 Autora do Curso</h2>
