@@ -1,0 +1,287 @@
+@import url(./global.css);
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+}
+
+/* Section-1 */
+
+.section-1__bg {
+    position: relative;
+    padding: 150px 0 320px;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e) no-repeat;
+    background-size: 400%;
+    animation: background-move 10s linear infinite alternate;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 30px;
+}
+
+.section-1__bg::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--primary-color), transparent) no-repeat;
+}
+
+.section-1__group_brands {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.section-1__group_brands img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.section-1__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.section-1__title.--bold {
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.section-1__line_divider {
+    width: 70%;
+    height: 5px;
+    background: var(--divider-bg-color);
+    border: none;
+}
+
+.section-1__offer {
+    font-size: 1.25rem;
+    font-family: "Quicksand";
+}
+
+.section-1__price {
+    display: block;
+    font: 700 2.5rem "Raleway", sans-serif;
+}
+
+.--textsmall {
+    display: inline;
+    font: 300 1rem "Raleway", sans-serif;
+}
+
+.section-1 a {
+    font-size: 1rem;
+}
+
+.section-1__observation {
+    font-family: "Quicksand";
+}
+
+/* Section-2 */
+
+.section-2 {
+    width: 100%;
+    background: url("../assets/images/background-movies-series.png") no-repeat;
+    background-size: cover;
+}
+
+.section-2__title {
+    font: 500 2rem "Raleway", sans-serif;
+    margin-bottom: 30px;
+}
+
+.section-2__cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+    perspective: 2000px;
+    perspective-origin: top;
+
+}
+
+.section-2__card {
+    display: flex;
+    /* flex: 1; */
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
+    max-width: 500px;
+    padding: 40px 60px;
+    border-radius: 8px;
+    gap: 25px;
+    background: var(--card-bg-color);
+    transition: all 600ms ease-in-out;
+}
+
+[data-card="1"]:hover+[data-card="2"] {
+    transform: rotateY(-45deg);
+}
+
+.section-2__cards:has([data-card="2"]:hover) [data-card="1"] {
+    transform: rotateY(45deg);
+}
+
+.section-2__offer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.section-2__price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.section-2__list__item {
+    text-align: left;
+    list-style: none;
+    font-size: 1.25rem;
+    padding-left: 14px;
+    margin-bottom: 14px;
+}
+
+.section-2__list__item::marker {
+    content: "+";
+    font-size: 2rem;
+    margin: 0 8px 0 0;
+}
+
+.section-3__title {
+    margin: 40px;
+    font-size: 2rem;
+    font-weight: 500;
+
+}
+
+.section-3__banners {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 2rem;
+}
+
+.section-3__banner {
+    border-radius: 16px;
+    background-size: cover;
+    outline: 2px solid transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 400ms linear;
+    overflow: hidden;
+}
+
+.section-3__banner:hover {
+    outline: 2px solid var(--tertiary-color);
+    transform: scale(1.05);
+}
+
+.section-3__image {
+    width: 100%;
+    transition: opacity 400ms linear;
+}
+
+.section-3__image:hover {
+    opacity: 0;
+}
+
+.section-3__banner:nth-child(1):hover {
+    background-image: url("../assets/images/hbo-hover_0.webp");
+}
+
+.section-3__banner:nth-child(2):hover {
+    background-image: url("../assets/images/MAX-Hover.webp");
+}
+
+.section-3__banner:nth-child(3):hover {
+    background-image: url("../assets/images/DC-Hover.webp");
+}
+
+.section-3__banner:nth-child(4):hover {
+    background-image: url("../assets/images/WB-Hover.webp");
+}
+
+.section-3__banner:nth-child(5):hover {
+    background-image: url("../assets/images/CN-Hover.png");
+}
+
+.section-3__banner:nth-child(6):hover {
+    background-image: url("../assets/images/UCL-Hover.webp");
+}
+
+@keyframes background-move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section-1__bg{
+        padding: 150px 0;
+    }
+
+    .section-1{
+        gap: 40px;
+    }
+    
+    .section-1__title span{
+        margin-top: 24px;
+    }
+
+    .section-2__card{
+        padding: 40px;
+    }
+
+    .section-2__offer{
+        flex-direction: column;
+    }
+
+    .section-2__price{
+        font-size: 1.5rem;
+    }
+
+    .section-2__list__item{
+        font-size: 1rem;
+    }
+
+    .section-3__banners{
+        width: 100%;
+        padding: 5px 24px;
+        grid-template-columns: repeat(6, 50%);
+        grid-template-rows: 1fr;
+        grid-auto-flow: column;
+        overflow: auto hidden;
+    }
+}
+
+@media (pointer: coarse){
+    .section-2__card{
+        transform: none !important;
+    }
+}

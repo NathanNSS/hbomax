@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.7);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+/* Basic Reset CSS and settings */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:var(--text-color, #FFF);
+    font: 400 1rem "Raleway", sans-serif;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+button{
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Barra de Navegação */
+.container-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--nav-bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.container-img {
+    max-width: 150px;
+    position: relative;
+}
+
+.container-img img {
+    width: 100%;
+}
+
+.container-btn {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.item-nav {
+    font: 700 0.75rem "Raleway", sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.--btn {
+    padding: 8px 24px;
+    border-radius: 500px;
+    background-color: var(--tertiary-color, #b535f6);
+    transition: 400ms linear;
+    transition-property: background, color;
+}
+
+.--btn:hover {
+    background-color: var(--btn-link-bg-color, #FFF);
+    color: var(--btn-link-color, #000);
+}
+
+/* ---- */
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 70px 0;
+}
+
+.container-link a {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--link-color);
+    margin: 0 14px;
+    transition: color 300ms linear;
+}
+
+.container-link a:hover{
+    color: var(--text-color);
+}
+
+.text-right-reserved {
+    font: 300 0.75rem "Quicksand"; 
+    color: var(--link-color);
+    margin: 14px 24px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+/* ---- */
+
+.spaced-text{
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-special{
+    padding: 16px 40px;
+    border: none;
+    border-radius: 500px;
+    outline: 2px solid transparent;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 4px;
+    background: var(--btn-bg-color-gradient) no-repeat;
+    background-size: 250%;
+    background-position: left;
+    transition: all 300ms linear;
+}
+
+.--shake{
+    animation: shake 1000ms linear infinite;
+}
+
+.--shake:hover{
+    animation-play-state: paused;
+}
+
+.btn-special:hover{
+    background-size: 0%;
+    scale: 1.05;
+    outline: 2px solid var(--secondary-color);
+}
+
+@keyframes shake {
+    5%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(10deg);
+    }
+    20%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    40%{
+        transform: rotate(-10deg);
+    }
+    50%,100%{
+        transform: rotate(0deg);
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container-nav{
+        flex-flow: column wrap;
+        gap: 24px;
+    }
+
+    .container-btn{
+        gap: 48px;
+    }
+
+    .container-link a{
+        display: block;
+        margin-bottom: 16px;
+    }
+
+}

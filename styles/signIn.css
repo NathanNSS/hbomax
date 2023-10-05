@@ -1,0 +1,89 @@
+@import url(./global.css);
+
+nav{
+    position: relative !important;
+}
+
+body {
+    background: rgb(31, 3, 66);
+    background: radial-gradient(circle, rgba(31, 3, 66, 1) 5%, rgba(2, 2, 40, 1) 40%);
+    background-size: 200%;
+    background-position: left;
+}
+
+.container-content {
+    max-width: 1200px;
+    margin: 150px auto 0 auto;
+}
+
+.container-main {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 48px auto;
+}
+
+.form-main{
+    width: 100%;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: var(--form-bg-color);
+
+}
+
+.title-form {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.container-main form {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.input-form {
+    background-color: var(--form-field-bg-color);
+    border: var(--form-field-border);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.input-form::placeholder {
+    color: var(--form-field-placeholder);
+}
+
+.input-form:required:not(:placeholder-shown):invalid {
+    border-color: var(--form-field-error);
+}
+
+.footer-form {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.footer-form a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--link-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .container-content{
+        margin: 24px auto 0 auto;
+    }
+
+    .container-main{
+        margin: 24px auto 0 auto;
+    }
+
+    .title-form{
+        margin-bottom: 16px;
+    }
+}

@@ -1,4 +1,4 @@
-<img src="assets/images/readme-images/cover.png">
+<img src="https://github.com/micheleambrosio/hbomax/blob/master/assets/images/readme-images/cover.png?raw=true">
 
 <h1 align="center">Site HBO Max</h1>
 <h4 align="center">Clone com modificações</h4>
@@ -11,7 +11,7 @@
 </p>
 
 <a href="https://micheleambrosio.github.io/hbomax/">
-  <img src="assets/images/readme-images/cover-2.png">
+  <img src="(https://github.com/micheleambrosio/hbomax/blob/master/assets/images/readme-images/cover-2.png?raw=true)">
 </a>
 
 ## 📎 Sumário
