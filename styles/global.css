@@ -25,27 +25,31 @@
     --form-field-error: rgb(255, 76, 76);
 
     scroll-behavior: smooth;
+    
+    :target {
+        scroll-margin-top: 3rem;
+    }
 }
 
 /* Basic Reset CSS and settings */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color:var(--text-color, #FFF);
+    color: var(--text-color, #FFF);
     font: 400 1rem "Raleway", sans-serif;
 }
 
-body{
+body {
     background-color: var(--primary-color);
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
@@ -118,7 +122,7 @@ img{
 /* Footer */
 footer {
     text-align: center;
-    padding: 70px 0;
+    padding: 70px 0 28px;
 }
 
 .container-link a {
@@ -129,14 +133,14 @@ footer {
     transition: color 300ms linear;
 }
 
-.container-link a:hover{
+.container-link a:hover {
     color: var(--text-color);
 }
 
 .text-right-reserved {
-    font: 300 0.75rem "Quicksand"; 
+    font: 300 0.75rem "Quicksand";
     color: var(--link-color);
-    margin: 14px 24px;
+    margin: 14px 24px 0 24px;
 }
 
 .social-media {
@@ -144,18 +148,18 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 80px;
+    margin-top: 48px;
 }
 
 /* ---- */
 
-.spaced-text{
+.spaced-text {
     letter-spacing: 2px;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.btn-special{
+.btn-special {
     padding: 16px 40px;
     border: none;
     border-radius: 500px;
@@ -169,53 +173,59 @@ footer {
     transition: all 300ms linear;
 }
 
-.--shake{
+.--shake {
     animation: shake 1000ms linear infinite;
 }
 
-.--shake:hover{
+.--shake:hover {
     animation-play-state: paused;
 }
 
-.btn-special:hover{
+.btn-special:hover {
     background-size: 0%;
     scale: 1.05;
     outline: 2px solid var(--secondary-color);
 }
 
 @keyframes shake {
-    5%{
+    5% {
         transform: rotate(0deg);
     }
-    10%{
+
+    10% {
         transform: rotate(10deg);
     }
-    20%{
+
+    20% {
         transform: rotate(-10deg);
     }
-    30%{
+
+    30% {
         transform: rotate(10deg);
     }
-    40%{
+
+    40% {
         transform: rotate(-10deg);
     }
-    50%,100%{
+
+    50%,
+    100% {
         transform: rotate(0deg);
     }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .container-nav{
+    .container-nav {
         flex-flow: column wrap;
         gap: 24px;
     }
 
-    .container-btn{
+    .container-btn {
         gap: 48px;
     }
 
-    .container-link a{
+    .container-link a {
         display: block;
         margin-bottom: 16px;
     }
